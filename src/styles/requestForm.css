@@ -1,0 +1,32 @@
+main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.serviceForm {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.label {
+    width: 100%;
+    font-size: 18px;
+}
+
+.input {
+    width: 100%;
+}
+
+#submitRequest {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: rgb(111, 72, 227);
+    color: rgb(230, 220, 255);
+    font-size: 1rem;
+}
