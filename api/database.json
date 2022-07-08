@@ -1,15 +1,22 @@
 {
   "plumbers": [
     {
-        "id": 1,
-        "name": "Maude"
+      "id": 1,
+      "name": "Maude"
     },
     {
-        "id": 2,
-        "name": "Merle"
+      "id": 2,
+      "name": "Merle"
     }
   ],
-  "completions": [],
+  "completions": [
+    {
+      "requestId": 2,
+      "plumberId": 1,
+      "date_created": 1657290078317,
+      "id": 2
+    }
+  ],
   "requests": [
     {
       "id": 1,

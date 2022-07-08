@@ -1,7 +1,8 @@
-import { getRequests, deleteRequest } from "./dataAccess.js"
+import { getRequests, deleteRequest, getPlumbers, saveCompletions } from "./dataAccess.js"
 
 export const Requests = () => {
     const requests = getRequests()
+    const plumbers = getPlumbers()
 
     let html = `
         <ul>
@@ -47,20 +48,26 @@ mainContainer.addEventListener(
         if (event.target.id === "plumbers") {
             const [requestId, plumberId] = event.target.value.split("--")
 
+            const timestamp = Date.now()
+
             /*
                 This object should have 3 properties
                    1. requestId
                    2. plumberId
                    3. date_created
             */
-            const completion = { }
+            const completion = { 
+                requestId: parseInt(requestId),
+                plumberId: parseInt(plumberId),
+                date_created: timestamp
+            }
 
             /*
                 Invoke the function that performs the POST request
                 to the `completions` resource for your API. Send the
                 completion object as a parameter.
              */
-
+            saveCompletions(completion)
         }
     }
 )
